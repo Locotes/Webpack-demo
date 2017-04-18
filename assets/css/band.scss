@@ -1,6 +1,11 @@
 .band {
     padding: 20px;
     background: lightgray;
-    display: flex;
     border-radius: 5px;
+
+    &-image {
+        display: block;
+        width: 250px;
+        height: auto;
+    }
 }

@@ -19,6 +19,10 @@ module.exports = {
             test: /\.scss$/,
             exclude: /node_modules/,
             loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader!postcss-loader!sass-loader' })
+        }, {
+            test: /\.(png|jpg)$/,
+            exclude: /node_modules/,
+            loader: 'url-loader?limit=1000000'
         }]
     },
     resolve: {

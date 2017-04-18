@@ -1,10 +1,13 @@
 import {} from '../../css/band.scss';
+import logo from '../../images/bands/metallica.jpg';
 
 export default class Band {
     constructor(name){ 
         this.name = name;
-
-        document.querySelector('.band').innerHTML = this.name;
+        this.image = null;
+        this.selector = document.querySelector('.band');
+        
+        this.selector.innerHTML = this.name;
     }
 
     play() {
@@ -13,5 +16,9 @@ export default class Band {
 
     stop() {
         console.log(`${this.name} stops playing`);
+    }
+
+    addImage() {
+        this.selector.innerHTML += `<img src="${logo}" class="band-image" />`;
     }
 }

@@ -15,6 +15,7 @@ import Band from './band/Band';
     var metallica = new Band('Metallica');
 
     metallica.play();
+    metallica.addImage();
 
     setTimeout(()=>{
         metallica.stop
